@@ -18,7 +18,7 @@ public class ClientController{
 
     @GetMapping
     public String getMethodName() {
-        kafkaService.send(new Client("Mateus", "Zup"));
+        kafkaService.send("clients",new Client("Mateus", "Zup"));
         return "Hello WOrld!";
     }
 
